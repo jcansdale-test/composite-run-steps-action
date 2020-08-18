@@ -12,3 +12,5 @@ runs:
         dotnet tool update gpr -g
         gpr list ${{ inputs.path }} -k ${{ github.token }}
       shell: bash
+      env:
+        DOTNET_NOLOGO: true
