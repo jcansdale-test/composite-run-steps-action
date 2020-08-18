@@ -5,6 +5,10 @@ inputs:
     description: 'gpr sub-command'
     required: false
     default: list
+  token:
+    description: 'PAT to use'
+    required: false
+    default: ${{ github.token }}
   path:
     description: 'Path to packages'
     required: true
@@ -14,7 +18,7 @@ runs:
   steps: 
     - run: |
         dotnet tool update gpr -g
-        gpr ${{ inputs.command }} ${{ inputs.path }} -k ${{ github.token }}
+        gpr ${{ inputs.command }} ${{ inputs.path }} -k ${{ inputs.token }}
       shell: bash
       env:
         DOTNET_NOLOGO: true
