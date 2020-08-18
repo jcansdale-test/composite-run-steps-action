@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - id: foo
-      uses: /hello
+      uses: ${{ github.repository }}/hello
       with:
         who-to-greet: "Jamie"
 
