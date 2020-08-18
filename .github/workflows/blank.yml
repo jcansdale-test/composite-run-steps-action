@@ -12,3 +12,4 @@ jobs:
       with:
         command: delete
         path: ${{ github.repository }}
+        options: --force
