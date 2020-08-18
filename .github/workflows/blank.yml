@@ -10,4 +10,5 @@ jobs:
 
     - uses: ./gpr
       with:
-        path: ${{ github.repository_owner }}
+        command: delete
+        path: ${{ github.repository }}
