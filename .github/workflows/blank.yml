@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - id: foo
-      uses: ${{ github.repository }}/hello
+      uses: jcansdale-test/composite-run-steps-action/hello
       with:
         who-to-greet: "Jamie"
 
