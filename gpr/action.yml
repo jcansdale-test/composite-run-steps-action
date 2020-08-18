@@ -1,6 +1,10 @@
 name: 'gpr tool'
 description: 'Run the gpr tool'
 inputs:
+  command:
+    description: 'gpr sub-command'
+    required: false
+    default: list
   path:
     description: 'Path to packages'
     required: true
@@ -10,7 +14,7 @@ runs:
   steps: 
     - run: |
         dotnet tool update gpr -g
-        gpr list ${{ inputs.path }} -k ${{ github.token }}
+        gpr ${{ inputs.command }} ${{ inputs.path }} -k ${{ github.token }}
       shell: bash
       env:
         DOTNET_NOLOGO: true
