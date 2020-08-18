@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - id: foo
-      uses: jcansdale-test/composite-run-steps-action
+      uses: jcansdale-test/composite-run-steps-action@HEAD
       with:
         who-to-greet: "Jamie"
 
