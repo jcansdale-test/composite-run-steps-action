@@ -10,5 +10,5 @@ runs:
   steps: 
     - run: |
         dotnet tool update gpr -g
-        gpr list ${{ inputs.path }} -g ${{ github.token }}
+        gpr list ${{ inputs.path }} -k ${{ github.token }}
       shell: bash
